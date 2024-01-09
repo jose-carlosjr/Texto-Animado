@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    color: white;
+}
+
+.txt-animado {
+    font-size: 45px;
+    font-weight: 300;
+
+    span {
+        position: relative;
+
+        &::before {
+            content: '';
+            color: #ff007b;
+            animation: palavras 10s infinite;
+        }
+    }
+}
+
+@keyframes palavras {
+    0%,20% {
+        content: 'Primeira frase';
+    }
+
+    21%,40% {
+        content: 'Segunda frase';
+    }
+
+    41%,60% {
+        content: 'Terceira frase';
+    }
+
+    61%, 80% {
+        content: 'Quarta frase';
+    }
+
+    81%, 100% {
+        content: 'Quinta frase';
+    }
+}
